@@ -1,22 +1,19 @@
-void greet(String name) {
-  print('Hello, $name!');
+import 'dart:math';
+
+void executeOperation(double a, double b, double Function(double, double) operation) {
+  var result = operation(a, b);
+  print('Result : $result');
 }
 
-int multiply(int a, int b) => a * b;
+double triangleArea(double base, double height) => 0.5 * base * height;
 
-double calculateArea({required double width, required double height}) {
-  return width * height;
-}
+double rectangleArea(double width, double height) => width * height;
+
+double cylinderVolume(double diameter, double height) => pi * pow(diameter / 2, 2) * height;
 
 void main() {
-  greet('Somchai');
-
-  int product = multiply(7, 6);
-  print('7 * 6 = $product');
-
-  double area = calculateArea(width: 5.5, height: 10.0);
-  print('Area (5.5 x 10.0) = $area');
-
-  double area2 = calculateArea(height: 8.0, width: 4.0);
-  print('Area (4.0 x 8.0) = $area2');
+  print('Author : hon');
+  executeOperation(3, 4, triangleArea);
+  executeOperation(3, 4, rectangleArea);
+  executeOperation(3, 4, cylinderVolume);
 }

@@ -9,7 +9,7 @@ void main() {
 
   print('Middle name before assignment: $middleName');
 
-  middleName ??= 'N/A';
+  middleName ??= 'hon';
   print('Middle name after assignment: $middleName');
 
   middleName ??= 'Something Else';

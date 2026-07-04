@@ -12,7 +12,6 @@ double rectangleArea(double width, double height) => width * height;
 double cylinderVolume(double diameter, double height) => pi * pow(diameter / 2, 2) * height;
 
 void main() {
-  print('Author : hon');
   executeOperation(3, 4, triangleArea);
   executeOperation(3, 4, rectangleArea);
   executeOperation(3, 4, cylinderVolume);
